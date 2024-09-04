@@ -1,5 +1,6 @@
-const soletrando = (texto: string): string => {
-    return texto.split('').join('-');
-}
+const soletrando = (texto: string) => {
 
-console.log(soletrando('guido'));
+    return texto.split('').join('-');
+};
+
+console.log(soletrando('programador'));

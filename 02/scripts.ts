@@ -1,22 +1,3 @@
-const filtrarUsuarios = (
-    usuarios: {
-        nome: string,
-        idade: number,
-        status: boolean
-    }[],
-    usuario: string
-): {
-    nome: string,
-    idade: number,
-    status: boolean
-}[] => {
-    const resultado = usuarios.filter((usuarioLista) => {
-        return usuarioLista.nome.toLowerCase().includes(usuario.toLowerCase())
-    });
-
-    return resultado;
-}
-
 const lista = [
     {
         nome: "Guido",
@@ -50,4 +31,24 @@ const lista = [
     },
 ]
 
-console.log(filtrarUsuarios(lista, 'jo'));
+
+const filtrarUsuarios = (
+    usuarios: {
+        nome: string,
+        idade: number,
+        status: boolean
+    }[],
+    usuario: string
+): {
+    nome: string,
+    idade: number,
+    status: boolean
+}[] => {
+    const resultado = usuarios.filter((usuarioLista) => {
+        return usuarioLista.nome.toLowerCase().includes(usuario.toLowerCase());
+    });
+
+    return resultado;
+};
+
+console.log(filtrarUsuarios(lista, 'an'));
